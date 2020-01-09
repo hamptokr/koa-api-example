@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Pa55w_rd",
+    "database": "example_dev",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Pa55w_rd",
+    "database": "example_tst",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Pa55w_rd",
+    "database": "example_prd",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

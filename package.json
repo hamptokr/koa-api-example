@@ -1,0 +1,22 @@
+{
+  "name": "koa-api-example",
+  "version": "1.0.0",
+  "description": "An example project to teach the basics of a web API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kramer Hampton <me@kramerhampton.dev>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "pg": "^7.17.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1"
+  }
+}
