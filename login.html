@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Bakery Login</title>
+  </head>
+  <body>
+    <input type="text" id="username" />
+    <input type="password" id="password" />
+    <button id="submit">Login</button>
+    <script>
+      const passEl = document.getElementById("password");
+      const userEl = document.getElementById("username");
+      const btnEl = document.getElementById("submit");
+
+      // Example POST method implementation:
+      async function postData(url = "", data = {}) {
+        // Default options are marked with *
+        return await fetch(url, {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          credentials: "same-origin", // include, *same-origin, omit
+          headers: {
+            "Content-Type": "application/json"
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *client
+          body: JSON.stringify(data) // body data type must match "Content-Type" header
+        });
+      }
+
+      btnEl.onclick = async event => {
+        const res = await postData("http://localhost:8080/api/login", {
+          username: userEl.value,
+          password: passEl.value
+        });
+
+        localStorage.setItem("BAKERY_AUTH", res.headers.get("X-Auth"));
+      };
+    </script>
+  </body>
+</html>
